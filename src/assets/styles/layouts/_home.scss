@@ -2,6 +2,37 @@
   box-sizing: border-box;
 }
 
+.af-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .menu {
+    display: flex;
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+
+    li {
+      flex: 1 1 auto;
+      margin: 0px 1em;
+
+      a {
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  @media (min-width: $mqMinWidth) {
+    max-width: none;
+  }
+}
+
 body {
   display: flex;
   flex-direction: column;
