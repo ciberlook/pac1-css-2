@@ -1,0 +1,157 @@
+.topten {
+
+    ol {
+        list-style: none;
+        counter-reset: item;
+        padding: 0px;
+
+        li {
+            counter-increment: item;
+
+            @media (min-width: $mqMinWidth2) {
+                position: relative;
+                width: 50%;
+
+                h2{
+                    margin: 0;
+                    margin-left: 70px;
+                    margin-top: 1em;
+                }
+            }
+            
+        }
+
+        li:before {
+            content: "0" counter(item);
+            text-align: center;
+            background-color: $color-numeros;
+            font-size: 2.8em;
+            display: block;
+            padding: .3em;
+
+            @media (min-width: $mqMinWidth2) {
+                content: "0" counter(item);
+                font-size: 1.8em;
+                position:absolute;
+                top: 10px;
+                left: 0px;
+                width: 40px;
+                height: 40px;
+                line-height: 1.2;
+                border-radius: 40px;
+            }
+        }
+
+        @media (min-width: $mqMinWidth2) {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+
+    figure {
+        flex-wrap: wrap;
+        align-items: flex-start;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+
+        figcaption {
+            margin-top: 1em;
+            width: 100%;
+            
+            .grid {
+                display: grid;
+                grid-template-columns: auto auto auto auto;
+                grid-template-rows: 2em 2em;
+
+                @media (min-width: $mqMinWidth2) {
+                    grid-template-columns: 285px auto auto auto;
+                }
+
+                
+                    span:nth-child(1) {
+                        grid-column-start: 1;
+                        grid-column-end: 2;
+                        grid-row-start: 1;
+                        grid-row-end: 2;
+                        font-weight: bold;
+                    }
+    
+                    span:nth-child(2) {
+                        grid-column-start: 2;
+                        grid-column-end: 3;
+                        grid-row-start: 1;
+                        grid-row-end: 2;
+                        font-weight: bold;
+                    }
+    
+                    span:nth-child(3) {
+                        grid-column-start: 3;
+                        grid-column-end: 4;
+                        grid-row-start: 1;
+                        grid-row-end: 2;
+                        font-weight: bold;
+                    }
+    
+                    span:nth-child(4) {
+                        grid-column-start: 4;
+                        grid-column-end: 5;
+                        grid-row-start: 1;
+                        grid-row-end: 2;
+                        font-weight: bold;
+                    }
+                
+
+                    span:nth-child(5) {
+                        grid-column-start: 1;
+                        grid-column-end: 2;
+                        grid-row-start: 2;
+                        grid-row-end: 3;
+                    }
+    
+                    span:nth-child(6) {
+                        grid-column-start: 2;
+                        grid-column-end: 3;
+                        grid-row-start: 2;
+                        grid-row-end: 3;
+                    }
+    
+                    span:nth-child(7) {
+                        grid-column-start: 3;
+                        grid-column-end: 4;
+                        grid-row-start: 2;
+                        grid-row-end: 3;
+                    }
+    
+                    span:nth-child(8) {
+                        grid-column-start: 4;
+                        grid-column-end: 5;
+                        grid-row-start: 2;
+                        grid-row-end: 3;
+                    }
+                
+                
+                
+            }
+
+            
+        }
+
+        @media (min-width: $mqMinWidth2) {
+            display: flex;
+            margin-top: 2em;
+
+            img {
+                flex:0 1 100px;
+                width: auto;
+                margin-right: 1em;
+            }
+
+            figcaption {
+                flex: 0 1 100px;
+            }
+            
+        }
+            
+    }
+}
