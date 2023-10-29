@@ -1,3 +1,7 @@
+/* ----------------------------------- *\
+  #SECCION-PRINCIPAL
+\* ----------------------------------- */
+
 * {
   box-sizing: border-box;
 }
@@ -5,7 +9,7 @@
 .logo {
   font-size: 4em;
   margin: 0;
-  padding: .3em;
+  padding: 0.3em;
   color: $color-texto-menu;
 }
 
@@ -17,14 +21,26 @@
     display: block;
     visibility: visible;
   }
+}
 
+main {
+  margin: 0;
+  padding: 2rem;
+
+  a {
+    color: $color-enlaces;
+  }
+
+  a:hover {
+    color: $color-enlaces-hover;
+  }
 }
 
 .af-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: $color-menu; 
+  background-color: $color-menu;
 
   .sandwich {
     width: 50px;
@@ -38,8 +54,10 @@
     border: none;
     background-color: #0000;
     cursor: pointer;
-  
-    .bar1, .bar2, .bar3 {
+
+    .bar1,
+    .bar2,
+    .bar3 {
       width: 40px;
       height: 5px;
       background-color: $color-texto-menu;
@@ -56,13 +74,14 @@
   .change .bar1 {
     transform: translate(0, 11px) rotate(-45deg);
   }
-  
-  .change .bar2 {opacity: 0;}
-  
+
+  .change .bar2 {
+    opacity: 0;
+  }
+
   .change .bar3 {
     transform: translate(0, -11px) rotate(45deg);
   }
-  
 
   .menu {
     margin: 0;
@@ -82,7 +101,6 @@
     align-items: center;
 
     li {
-      
       margin: 50px 1em;
 
       a {
@@ -98,8 +116,6 @@
           font-weight: normal;
           letter-spacing: 0px;
         }
-
-        
       }
 
       a:hover {
@@ -121,8 +137,6 @@
   @media (min-width: $mqMinWidth1) {
     max-width: none;
   }
-
-  
 }
 
 body {
@@ -133,19 +147,6 @@ body {
   line-height: 24px;
 }
 
-main {
-  margin: 0;
-  padding: 2rem;
-
-  a {
-    color:$color-enlaces;
-  }
-
-  a:hover {
-    color:$color-enlaces-hover;
-  }
-}
-
 .uoc-container {
   max-width: 800px;
   margin: auto;
@@ -153,7 +154,8 @@ main {
   border-radius: 2rem;
   text-align: center;
   background-color: #fff;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
     0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
@@ -185,5 +187,4 @@ footer {
   margin-top: 1.5rem;
   font-size: 0.75rem;
   text-align: center;
-  
 }
