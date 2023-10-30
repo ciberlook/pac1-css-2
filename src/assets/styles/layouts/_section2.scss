@@ -2,7 +2,7 @@
   #SECCION-MIS-GENEROS-DE-MUSICA-FAVORITOS
 \* ------------------------------------------ */
 
-blockquote {
+.bloque-cita {
   font:
     14px/20px italic Times,
     serif;
@@ -15,20 +15,21 @@ blockquote {
   background-position: top left;
   background-repeat: no-repeat;
   text-indent: 23px;
-
-  span {
-    display: block;
-    background-image: url(../images/closequote1.gif);
-    background-repeat: no-repeat;
-    background-position: bottom right;
-  }
 }
 
-dt {
+.bloque-cita::before {
+  display: block;
+  background-image: url(../images/closequote1.gif);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  position: absolute;
+}
+
+.definition-list__title {
   font-weight: bold;
   font-size: 1.3em;
 }
 
-dd {
+.definition-list__desc {
   margin: 0px;
 }

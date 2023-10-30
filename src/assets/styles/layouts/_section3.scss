@@ -2,7 +2,7 @@
   #SECCION-OTROS-CONTENIDOS-INTERESANTES
 \* ------------------------------------------ */
 
-iframe {
+.marco {
   border: none;
   width: 100%;
   height: 300px;
@@ -13,7 +13,7 @@ iframe {
   }
 }
 
-.leyenda {
+.container__leyenda {
   text-align: center;
   font-style: italic;
 }
